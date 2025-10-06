@@ -7,15 +7,11 @@ gen.property = function (prop) {
 }
 
 gen.optional = function (obj, prop) {
-  return isProperty(prop)
-    ? obj + '?.' + prop
-    : obj + '?.[' + JSON.stringify(prop) + ']'
+  return isProperty(prop) ? obj + '?.' + prop : obj + '?.[' + JSON.stringify(prop) + ']'
 }
 
 module.exports = gen
 
 function gen(obj, prop) {
-  return isProperty(prop)
-    ? obj + '.' + prop
-    : obj + '[' + JSON.stringify(prop) + ']'
+  return isProperty(prop) ? obj + '.' + prop : obj + '[' + JSON.stringify(prop) + ']'
 }
